@@ -89,9 +89,14 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(flavorsArray, newFlavor){
+  flavorsArray.unshift(newFlavor);
+  return(flavorsArray);
  }
+
+const flavorsCopy = copy(originalFlavors);
+
+addFlavor(flavorsCopy,"Scoop Froggy Frog");
 
 
 
@@ -107,10 +112,14 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(flavorsArray){
+ flavorsArray.pop();
+ return(flavorsArray);
 }
 
+const flavorsCopy1 = copy(originalFlavors);
+
+removeLastFlavor(flavorsCopy1);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -125,9 +134,14 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavorsArray, indexNum){
+  let selectedFlavor = flavorsArray [indexNum];
+  return (selectedFlavor);
 }
+
+const flavorsCopy2 = copy(originalFlavors);
+
+getFlavorByIndex(flavorsCopy2, 12);
 
 
 
@@ -145,7 +159,7 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(flavorsArray, flavorName){
   /*your code here*/
 }
 
