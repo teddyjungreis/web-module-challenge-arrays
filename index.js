@@ -160,8 +160,14 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(flavorsArray, flavorName){
-  /*your code here*/
+  let flavorIndex = flavorsArray.indexOf(flavorName);
+  flavorsArray.splice(flavorIndex, 1);
+  return (flavorsArray);
 }
+
+const flavorsCopy3 = copy(originalFlavors);
+
+removeFlavorByName(flavorsCopy3, "Rocky Road");
 
 
 
@@ -184,9 +190,19 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(flavorsArray, flavorFilter){
+  const filteredFlavors = [];
+  for (let i = 0; i < flavorsArray.length; i++){
+    if(flavorsArray[i].includes(flavorFilter)){
+      filteredFlavors.push(flavorsArray[i]);
+    }
+  }
+  return (filteredFlavors);
 }
+
+const flavorsCopy4 = copy(originalFlavors);
+
+filterByWord(flavorsCopy4, "Chocolate");
 
 
 
